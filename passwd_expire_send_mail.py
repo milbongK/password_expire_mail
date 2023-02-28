@@ -87,7 +87,7 @@ def expire_id_send_mail():
             passwd_max_day = shadow_usr_max_passwd_list[i]
             to_day = (TODAY - LINUX_START_DAY).days
             until_change_passwd = (int(expire_day) + int(passwd_max_day)) - to_day
-            # 남은 만료일이 해당 숫자보다 적을 시, 메일 발송
+            ## 남은 만료일이 해당 숫자보다 적을 시, 메일 발송
             if until_change_passwd <= 7:
                 #send mail function ----------------------------------
                 from_address = "admin@test.com"
